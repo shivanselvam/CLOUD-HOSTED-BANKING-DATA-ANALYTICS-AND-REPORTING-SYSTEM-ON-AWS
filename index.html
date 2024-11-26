@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EasyBank Reporting System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>EasyBank Reporting System</h1>
+  <form id="report-form">
+    <label for="account-number">Account Number:</label>
+    <input type="text" id="account-number" name="account-number"><br><br>
+    <label for="report-type">Report Type:</label>
+    <select id="report-type" name="report-type">
+      <option value="transaction">Transaction Report</option>
+      <option value="balance">Balance Report</option>
+    </select><br><br>
+    <button id="submit-btn">Submit</button>
+  </form>
+  <div id="report-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+

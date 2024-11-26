@@ -1,0 +1,15 @@
+const AWS = require('aws-sdk');
+
+const s3 = new AWS.S3({ region: 'us-west-2' });
+
+const params = {
+  Bucket: 'mybucket',
+};
+
+s3.createBucket(params, (err, data) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log(data);
+  }
+});

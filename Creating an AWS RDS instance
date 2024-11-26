@@ -1,0 +1,19 @@
+const AWS = require('aws-sdk');
+
+const rds = new AWS.RDS({ region: 'us-west-2' });
+
+const params = {
+  DBInstanceClass: 'db.t2.micro',
+  DBInstanceIdentifier: 'mydbinstance',
+  Engine: 'mysql',
+  MasterUsername: 'myusername',
+  MasterUserPassword: 'mypassword',
+};
+
+rds.createDBInstance(params, (err, data) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log(data);
+  }
+});

@@ -1,0 +1,17 @@
+const AWS = require('aws-sdk');
+
+const s3 = new AWS.S3({ region: 'us-west-2' });
+
+const params = {
+  Bucket: 'mybucket',
+  Key: 'path/to/file.txt',
+  Body: 'Hello, world!',
+};
+
+s3.upload(params, (err, data) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log(data);
+  }
+});
